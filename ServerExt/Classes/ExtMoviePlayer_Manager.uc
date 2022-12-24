@@ -111,6 +111,22 @@ function OnMenuOpen(name WidgetPath, KFGFxObject_Menu Widget)
 		PerksMenu.ActionScriptVoid("closeContainer");
 }
 
+event OnClose()
+{
+	// Fix:
+	// ScriptWarning: Accessed None 'CurrentBackgroundMovie'
+	// ExtMoviePlayer_Manager KF-BIOTICSLAB.TheWorld:PersistentLevel.ExtPlayerController_0.ExtMoviePlayer_Manager_0
+	// Function KFGame.KFGFxMoviePlayer_Manager:OnClose:0039
+	if (CurrentBackgroundMovie != None)
+	{
+		Super.OnClose();
+	}
+	else
+	{
+		CloseMenus();
+	}
+}
+
 defaultproperties
 {
 	InGamePartyWidgetClass=class'ExtWidget_PartyInGame'
