@@ -404,7 +404,7 @@ function SetCurrentCharacterButtons()
 		BodySkinIndex = ExtPRI.CustomCharacter.BodySkinIndex;
 	}
 
-	DataObject.SetString("selectedCharacter", (bIsCustomChar ? ExtPRI.CustomCharList[ExtPRI.CustomCharacter.CharacterIndex].DisplayName : Localize(CharInfoPath, "CharacterName", class'KFGFxMenu_Gear'.Default.KFCharacterInfoString)));
+	DataObject.SetString("selectedCharacter", (bIsCustomChar ? ExtPRI.CustomCharList[ExtPRI.CharacterArchetypes.Length % ExtPRI.CustomCharacter.CharacterIndex].DisplayName : Localize(CharInfoPath, "CharacterName", class'KFGFxMenu_Gear'.Default.KFCharacterInfoString)));
 	DataObject.SetString("characterBio", (bIsCustomChar ? Repl(CurrentCharInfo.ArmMeshPackageName,"|","\n") : Localize(CharInfoPath, "Description", class'KFGFxMenu_Gear'.Default.KFCharacterInfoString)));
 	DataObject.SetInt("selectedCharacterIndex", CharacterIndex);
 
