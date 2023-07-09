@@ -1643,7 +1643,7 @@ function string WebAdminGetValue(name PropName, int ElementIndex)
 	case 'PerkClasses':
 		return (ElementIndex==-1 ? string(PerkClasses.Length) : PerkClasses[ElementIndex]);
 	case 'CustomChars':
-		return (ElementIndex==-1 ? string(CustomChars.Length) : CustomChars[ElementIndex]);
+		return (ElementIndex==-1 ? string(CustomChars.Length) : CustomChars[ElementIndex].ObjRefPath$"|"$CustomChars[ElementIndex].DisplayName);
 	case 'AdminCommands':
 		return (ElementIndex==-1 ? string(AdminCommands.Length) : AdminCommands[ElementIndex]);
 	case 'ServerMOTD':
@@ -1666,6 +1666,30 @@ final function UpdateArray(out array<string> Ar, int Index, const out string Val
 		if (Index>=Ar.Length)
 			Ar.Length = Index+1;
 		Ar[Index] = Value;
+	}
+}
+
+final function UpdateArrayChar(out array<FCustomCharData> Ar, int Index, const out string Value)
+{
+	local int i;
+	local string ObjRefPath,DisplayName;
+
+	if (Value=="#DELETE")
+		Ar.Remove(Index,1);
+	else
+	{
+		if (Index>=Ar.Length)
+			Ar.Length = Index+1;
+		i = InStr(Value, "|");
+
+		if (i != -1)
+		{
+			ObjRefPath = Left(Value,i-1);
+			DisplayName = Right(Value, i+1);
+
+			Ar[Index].ObjRefPath = ObjRefPath;
+			Ar[Index].DisplayName = DisplayName;
+		}
 	}
 }
 
@@ -1716,7 +1740,7 @@ function WebAdminSetValue(name PropName, int ElementIndex, string Value)
 	case 'PerkClasses':
 		UpdateArray(PerkClasses,ElementIndex,Value);	break;
 	case 'CustomChars':
-		UpdateArray(CustomChars,ElementIndex,Value);	break;
+		UpdateArrayChar(CustomChars,ElementIndex,Value);	break;
 	case 'AdminCommands':
 		UpdateArray(AdminCommands,ElementIndex,Value);	break;
 	case 'BonusGameSongs':
