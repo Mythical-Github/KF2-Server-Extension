@@ -24,9 +24,15 @@ struct FSavedInvEntry
 	var byte Gren;
 	var array<FInventory> Inv;
 };
+struct FCustomCharData
+{
+	var string ObjRefPath;
+	var string DisplayName;
+};
 var array<FSavedInvEntry> PlayerInv;
 
-var config array<string> PerkClasses,CustomChars,AdminCommands,BonusGameSongs,BonusGameFX;
+var config array<string> PerkClasses,AdminCommands,BonusGameSongs,BonusGameFX;
+var config array<FCustomCharData> CustomChars;
 var config array<CFGCustomZedXP> CustomZedXP;
 var array< class<Ext_PerkBase> > LoadedPerks;
 var array<FCustomCharEntry> CustomCharList;
@@ -77,6 +83,7 @@ function PostBeginPlay()
 	local Object O;
 	local string S;
 	local bool bLock;
+	local string ObjRefPath;
 
 	Super.PostBeginPlay();
 	if (WorldInfo.Game.BaseMutator==None)
@@ -183,14 +190,17 @@ function PostBeginPlay()
 	j = 0;
 	for (i=0; i<CustomChars.Length; ++i)
 	{
-		bLock = Left(CustomChars[i],1)=="*";
-		S = (bLock ? Mid(CustomChars[i],1) : CustomChars[i]);
+		ObjRefPath = CustomChars[i].ObjRefPath;
+
+		bLock = Left(ObjRefPath,1)=="*";
+		S = (bLock ? Mid(ObjRefPath,1) : ObjRefPath);
 		CH = KFCharacterInfo_Human(DynamicLoadObject(S,class'KFCharacterInfo_Human',true));
 		if (CH!=None)
 		{
 			CustomCharList.Length = j+1;
 			CustomCharList[j].bLock = bLock;
 			CustomCharList[j].Char = CH;
+			CustomCharList[j].DisplayName = CustomChars[i].DisplayName;
 			++j;
 			continue;
 		}
@@ -206,6 +216,7 @@ function PostBeginPlay()
 					CustomCharList[j].bLock = bLock;
 					CustomCharList[j].Char = KFCharacterInfo_Human(O);
 					CustomCharList[j].Ref = OR;
+					CustomCharList[j].DisplayName = CustomChars[i].DisplayName;
 					++j;
 				}
 			}
