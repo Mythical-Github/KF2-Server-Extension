@@ -5,6 +5,7 @@ struct FCustomCharEntry
 	var bool bLock;
 	var KFCharacterInfo_Human Char;
 	var ObjectReferencer Ref;
+	var string DisplayName;
 };
 struct FMyCustomChar // Now without constant.
 {

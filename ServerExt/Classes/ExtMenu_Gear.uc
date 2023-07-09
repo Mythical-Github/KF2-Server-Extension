@@ -175,7 +175,7 @@ function UpdateCharacterList()
 		{
 			SlotObject = CreateObject("Object");
 			SlotObject.SetInt("ItemIndex", (ExtPRI.CharacterArchetypes.length+i));
-			SlotObject.SetString("label", Repl(string(ExtPRI.CustomCharList[i].Char.Name),"_"," "));
+			SlotObject.SetString("label", ExtPRI.CustomCharList[i].DisplayName);	
 			SlotObject.SetBool("enabled", true);
 			TexturePath = "img://"$PathName(ExtPRI.CustomCharList[i].Char.DefaultHeadPortrait);
 			SlotObject.SetString("source", TexturePath);
