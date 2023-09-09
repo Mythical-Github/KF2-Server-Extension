@@ -120,6 +120,7 @@ If you have a desire to help translate ServerExt into other languages, you can r
 [url=https://steamcommunity.com/profiles/76561197967822972]MilkTeaFox[/url] - Traditional Chinese [CHT];
 [url=https://steamcommunity.com/profiles/76561198930643117]あさぴっぴ1020[/url] - Japanese [JPN];
 [url=https://steamcommunity.com/profiles/76561198080866131]Jason Voorehes [/url] - Spanish [ESN];
+[url=https://steamcommunity.com/profiles/76561198200630473/]小曦曦[/url] - Simplified Chinese [CHN];
 
 [h1]Sources[/h1]
 [url=https://github.com/GenZmeY/KF2-Server-Extension]https://github.com/GenZmeY/KF2-Server-Extension[/url] [b](GNU GPLv3)[/b]
