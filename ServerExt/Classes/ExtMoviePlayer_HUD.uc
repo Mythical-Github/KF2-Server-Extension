@@ -103,7 +103,7 @@ function UpdateObjectiveActive()
 	{
 		return;
 	}
-	
+
 	Super.UpdateObjectiveActive();
 }
 
