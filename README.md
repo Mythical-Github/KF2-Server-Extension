@@ -98,4 +98,4 @@ In the description of the pull request, describe the changes you made.
 ***
 
 **Note about the banner:**  
-The cat in the picture is [meowbin](https://www.deviantart.com/cottonvalent/gallery/48815375/creepy-cat). And [Cotton Valent](https://www.deviantart.com/cottonvalent) is the artist who designed and painted this magnificent cat.
+The cat in the picture is [meowbin](https://twitter.com/meawbinneko). And [Cotton Valent](https://twitter.com/horrormove) is the artist who designed and painted this magnificent cat.
