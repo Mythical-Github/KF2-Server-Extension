@@ -10,8 +10,6 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/GenZmeY/KF2-Server-Extension)](https://docs.unrealengine.com/udk/Three/WebHome.html)
 [![GitHub](https://img.shields.io/github/license/GenZmeY/KF2-Server-Extension)](LICENSE)
 
-[![ServerExt Contributors](https://contrib.rocks/image?repo=GenZmeY/KF2-Server-Extension)](https://github.com/GenZmeY/KF2-Server-Extension/graphs/contributors)
-
 ***
 
 *This mod replaces current perk system in [Killing Floor 2](https://en.wikipedia.org/wiki/Killing_Floor_2) with a serverside perk progression with RPG elements, which let you buy individual stats and traits.*
@@ -59,7 +57,7 @@ If you find a bug, go to the [issue page](https://github.com/GenZmeY/KF2-Server-
 Describe what the bug looks like and how we can reproduce it.  
 Attach screenshots if you think it might help.
 
-If it's a crash issue, be sure to include the `Launch.log` and `Launch_2.log` files. You can find them here:  
+If it's a crash issue, be sure to include the `Launch.log` file. You can find them here:  
 `C:\Users\<USERNAME>\Documents\My Games\KillingFloor2\KFGame\Logs\`  
 Please note that these files are overwritten every time you start the game/server. Therefore, you must take these files immediately after the game crashes in order not to lose information.
 
@@ -77,10 +75,27 @@ Before making a pull request, make sure that:
 In the description of the pull request, describe the changes you made.
 
 
+## Contributors
+[![ServerExt Contributors](https://contrib.rocks/image?repo=GenZmeY/KF2-Server-Extension)](https://github.com/GenZmeY/KF2-Server-Extension/graphs/contributors)
+
+[Marco](https://steamcommunity.com/profiles/76561197975509070)  
+[ForrestMarkX](https://steamcommunity.com/profiles/76561197997881512)  
+[inklesspen](https://steamcommunity.com/profiles/76561198143883210)  
+[GenZmeY](https://steamcommunity.com/profiles/76561198001617867)  
+[secret](https://steamcommunity.com/profiles/76561198042219365)  
+[Scaredkid93](https://steamcommunity.com/profiles/76561198004271210)  
+
+**Translators:**  
+[GenZmeY](https://steamcommunity.com/profiles/76561198001617867) - Russian [RUS];  
+[MilkTeaFox](https://steamcommunity.com/profiles/76561197967822972) - Traditional Chinese [CHT];  
+[あさぴっぴ1020](https://steamcommunity.com/profiles/76561198930643117) - Japanese [JPN];  
+[Jason Voorehes ](https://steamcommunity.com/profiles/76561198080866131) - Spanish [ESN];  
+[小曦曦](https://steamcommunity.com/profiles/76561198200630473) - Simplified Chinese [CHN].  
+
 ## License
 [![license](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](LICENSE)
 
 ***
 
 **Note about the banner:**  
-The cat in the picture is [meowbin](https://www.deviantart.com/cottonvalent/gallery/48815375/creepy-cat). And [Cotton Valent](https://www.deviantart.com/cottonvalent) is the artist who designed and painted this magnificent cat.
+The cat in the picture is [meowbin](https://twitter.com/meawbinneko). And [Cotton Valent](https://twitter.com/horrormove) is the artist who designed and painted this magnificent cat.

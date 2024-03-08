@@ -1171,10 +1171,10 @@ simulated function float ApplyEffect(name Type, float Value, float Progress)
 		Modifiers[1] = 1.f + (Value*Progress);
 		break;
 	case 'Recoil':
-		Modifiers[2] = 1.f / (1.f+Value*Progress);
+		Modifiers[2] = 1.f - (Value*Progress);
 		break;
 	case 'Spread':
-		Modifiers[3] = 1.f / (1.f+Value*Progress);
+		Modifiers[3] = 1.f - (Value*Progress);
 		break;
 	case 'Rate':
 		Modifiers[4] = 1.f / (1.f+Value*Progress);
@@ -1191,8 +1191,8 @@ simulated function float ApplyEffect(name Type, float Value, float Progress)
 		}
 		break;
 	case 'KnockDown':
-		Modifiers[7] = FMin(1.f + (Value*Progress),2.f);
-		return (Modifiers[7]-1.f);
+		Modifiers[7] = 1.f + (Value*Progress);
+		break;
 	case 'Welder':
 		Modifiers[8] = 1.f + (Value*Progress);
 		break;
@@ -1556,8 +1556,8 @@ defaultproperties
 
 	DefPerkStats(0)=(MaxValue=50,CostPerValue=1,StatType="Speed",Progress=0.4)
 	DefPerkStats(1)=(MaxValue=1000,CostPerValue=1,StatType="Damage",Progress=0.5)
-	DefPerkStats(2)=(MaxValue=90,CostPerValue=1,StatType="Recoil",Progress=1)
-	DefPerkStats(3)=(MaxValue=80,CostPerValue=1,StatType="Spread",Progress=0.75)
+	DefPerkStats(2)=(MaxValue=100,CostPerValue=1,StatType="Recoil",Progress=1)
+	DefPerkStats(3)=(MaxValue=100,CostPerValue=1,StatType="Spread",Progress=1)
 	DefPerkStats(4)=(MaxValue=1000,CostPerValue=1,StatType="Rate",Progress=0.5)
 	DefPerkStats(5)=(MaxValue=1000,CostPerValue=1,StatType="Reload",Progress=0.5)
 	DefPerkStats(6)=(MaxValue=150,CostPerValue=1,StatType="Health",Progress=1)

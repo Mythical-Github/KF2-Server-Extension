@@ -93,6 +93,20 @@ final function ShowKillMessageX(PlayerReplicationInfo PRI1, PlayerReplicationInf
 	}
 }
 
+function UpdateObjectiveActive()
+{
+	// Fix:
+	// ScriptWarning: Accessed None 'KFGRI'
+	// ExtMoviePlayer_HUD Transient.ExtMoviePlayer_HUD_0
+	// Function KFGame.KFGFxMoviePlayer_HUD:UpdateObjectiveActive:00B7
+	if (GetPC() == None || KFGameReplicationInfo(GetPC().WorldInfo.GRI) == None)
+	{
+		return;
+	}
+
+	Super.UpdateObjectiveActive();
+}
+
 defaultproperties
 {
 	WidgetBindings.Remove((WidgetName="SpectatorInfoWidget",WidgetClass=class'KFGFxHUD_SpectatorInfo'))
@@ -103,4 +117,6 @@ defaultproperties
 	WidgetBindings.Add((WidgetName="PlayerBackpackWidget",WidgetClass=class'ExtHUD_PlayerBackpack'))
 	WidgetBindings.Remove((WidgetName="WeaponSelectContainer",WidgetClass=class'KFGFxHUD_WeaponSelectWidget'))
 	WidgetBindings.Add((WidgetName="WeaponSelectContainer",WidgetClass=class'ExtHUD_WeaponSelectWidget'))
+	WidgetBindings.Remove((WidgetName="ObjectiveContainer",WidgetClass=class'KFGFxHUD_ObjectiveConatiner'))
+	WidgetBindings.Add((WidgetName="ObjectiveContainer",WidgetClass=class'ExtHUD_ObjectiveConatiner'))
 }

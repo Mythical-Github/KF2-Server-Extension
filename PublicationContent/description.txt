@@ -88,7 +88,7 @@ SettingsInit=0[/b]
 [b][ServerExtMut.xVotingHandler]
 ConfigVersion=0[/b]
 
-[*]Put in [b]KFServerExt.ini[/b] this: [url=https://pastebin.com/raw/Wx3HYjkj]<PasteBin>[/url] [b](*)[/b]
+[*]Put in [b]KFServerExt.ini[/b] this: [url=https://gist.githubusercontent.com/GenZmeY/616b6f845f9829c93976f42f6c48505a/raw/1a8c8409d61a2908d5c854ced0932b8ed43a7f51/KFServerExt-Default.ini]<github gist>[/url] [b](*)[/b]
 
 [*]Start the game/server along with the ServerExt, then check the configs - content should be generated.
 [/olist]
@@ -120,6 +120,7 @@ If you have a desire to help translate ServerExt into other languages, you can r
 [url=https://steamcommunity.com/profiles/76561197967822972]MilkTeaFox[/url] - Traditional Chinese [CHT];
 [url=https://steamcommunity.com/profiles/76561198930643117]あさぴっぴ1020[/url] - Japanese [JPN];
 [url=https://steamcommunity.com/profiles/76561198080866131]Jason Voorehes [/url] - Spanish [ESN];
+[url=https://steamcommunity.com/profiles/76561198200630473/]小曦曦[/url] - Simplified Chinese [CHN];
 
 [h1]Sources[/h1]
 [url=https://github.com/GenZmeY/KF2-Server-Extension]https://github.com/GenZmeY/KF2-Server-Extension[/url] [b](GNU GPLv3)[/b]

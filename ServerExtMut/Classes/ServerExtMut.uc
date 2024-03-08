@@ -1757,6 +1757,8 @@ function WebAdminSetValue(name PropName, int ElementIndex, string Value)
 
 defaultproperties
 {
+	GroupNames.Add("ServerExt")
+
 	// Main devs
 	DevList.Add("0x0110000100E8984E") // Marco
 	DevList.Add("0x01100001023DF8A8") // ForrestMarkX
